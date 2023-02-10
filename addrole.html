@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Admin Panel Dashboard</title>
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar starts here -->
+        <div class="bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-3 primary-text fs-4 fw-bold text-uppercase border-bottom bg-dark text-light">
+                <i class="fa-sharp fa-solid fa-laptop-code me-2"></i> Pico Intern
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-users me-2"></i> User Management
+                </a>
+                <a href="users.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-user me-2"></i> Users
+                </a>
+                <a href="roles.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fa-solid fa-suitcase me-2"></i> Roles
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar ends here -->
+
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand navbar-dark bg-dark py-4 px-4" id="nav">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-bars text-light fs-4 me-3" id="menu-toggle"></i>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle sexond-text fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user me-2"> Demo</i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container-fluid px-4">
+                <h3 class="fw-bold my-3">Add Role</h3><hr>
+                <form class="mt-3">
+                    <div class="form-group row">
+                        <div class="form-group col-md-6">
+                            <label for="">Role Name:</label>
+                            <input type="text" class="form-control" placeholder="Role Name" aria-label="RoleName" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="form-group row my-4">
+                        <label for="staticPermissions" class="col-sm-2 col-form-label">Permissions:</label>
+                        <table class="table">
+                            <!-- Permissions -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Others</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Service staff
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View export to buttons (csv/excel/print/pdf) on tables
+                                        </label>
+                                      </div>
+                                </td>
+                            </tr>
+                              
+                            <!-- User -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">User</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View user
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add user
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit user
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete user
+                                        </label>
+                                      </div>
+                                </td>
+                            </tr>
+
+                            <!-- Roles -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Roles</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View role
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add role
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit role
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete role
+                                        </label>
+                                      </div>
+                                </td>
+                            </tr>
+
+                            <!-- Supplier -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Supplier</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          View all supplier
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                          View own supplier
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add supplier
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit supplier
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete supplier
+                                        </label>
+                                      </div>
+                                </td>
+                            </tr>
+
+                            <!-- Customer -->
+                              <tr>
+                                <th scope="row" class="fs-5 fw-bold">Customer <i class="fas fa-info-circle"></i></th> 
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <!-- First radio group -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          View all customer
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                          View own customer
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                    <!-- Second radio group -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          View customers with no sell from one month only
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            View customers with no sell from three months only
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            View customers with no sell from six months only
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            View customers with no sell from one year only
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          View customers irrespective of their sell
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+
+                                    <!-- Check group -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add customer
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit customer
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete customer
+                                        </label>
+                                      </div>
+                                </td>
+                              </tr>
+
+                            <!-- Product -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Product</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View product
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add product
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit product
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete product
+                                        </label>
+                                      </div>
+                                      <hr class="text-white">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add Opening Stock
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View Purchase Price
+                                        </label>
+                                        <i class="fas fa-info-circle"></i>
+                                      </div>
+                                </td>
+                            </tr>
+
+                            <!-- Purchase & Stock Adjustment -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Purchase & Stock Adjustment</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          View all Purchase & Stock Adjustment
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                          View own Purchase & Stock Adjustment
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add purchase & Stock Adjustment
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit purchase & Stock Adjustment
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete purchase & Stock Adjustment
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add purchase payment
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit purchase payment
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete purchase payment
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Update Status
+                                        </label>
+                                      </div>
+                                </td>
+                            </tr>
+
+                            <!-- POS -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">POS</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View POS sell
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add POS sell
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit POS sell
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete POS sell
+                                        </label>
+                                      </div>
+                                      <hr class="text-white">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit product price from POS screen
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit product discount from POS screen
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Print Invoice
+                                        </label>
+                                      </div>
+                                </td>
+                            </tr>
+
+                            <!-- Sell -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Sell <i class="fas fa-info-circle"></i></th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          View all sell
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                          View own sell only
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View paid sells only
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View due sells only
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View partially paid sells only
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View overdue sells only
+                                        </label>
+                                      </div>
+                                      <hr class="text-white">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add Sell
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Update Sell
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete Sell
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Commission agent can view their own sell
+                                        </label>
+                                      </div>
+                                      <hr class="text-white">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add sell payment
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit sell payment
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete sell payment
+                                        </label>
+                                      </div>
+                                      <hr class="text-white">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit product price from sale screen
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit product discount from sale screen
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add/Edit/Delete Discount
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Access all sell return
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Access own sell return
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add edit invoice number
+                                        </label>
+                                      </div>
+                                </td>
+                            </tr>
+
+                            <!-- Drafts -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Draft</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          View all drafts
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                          View own drafts
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit draft
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete draft
+                                        </label>
+                                      </div>
+                                </td>
+                            </tr>
+
+                            <!-- Quotations -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Quotation</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          View all quotations
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                          View own quotations
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit quotation
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete quotation
+                                        </label>
+                                      </div>
+                                </td>
+                            </tr>
+
+                            <!-- Shipments -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Shipments</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          Access all shipments
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                          Access own shipments
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Access pending shipments only
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Commission agent can access their own shipments
+                                        </label>
+                                      </div>
+                                </td>
+                            </tr>
+
+                            <!-- Cash Register -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Cash Register</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View cash register
+                                        </label>
+                                    </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Close cash register
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Brand -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Brand</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View brand
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add brand
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit brand
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete brand
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Tax Rate -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Tax Rate</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View tax rate
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add tax rate
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit tax rate
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete tax rate
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Unit -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Unit</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View unit
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add unit
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit unit
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete unit
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Category -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Category</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View category
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add category
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit category
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete category
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Report -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Report</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View purchase & sell report
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View Tax report
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View Supplier & Customer report
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View expense report
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View profit/loss report
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View stock report, stock adjustment report & stock expiry report
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View trending product report
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View register report
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View sales representative report
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View product stock value
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Settings -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Settings</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Access business settings
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Access barcode settings
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Access invoice settings
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Access printers
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Expense -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Expense</th>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Select all
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          Access all expenses
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                          View own expenses only
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add Expense
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit Expense
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete Expense
+                                        </label>
+                                      </div>
+                                </td>
+                            </tr>
+
+                            <!-- Home -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Home <i class="fas fa-info-circle"></i></th>
+                                <td>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            View Home data
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Account -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Account</th>
+                                <td>
+                                </td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Access Accounts
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit account transaction
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete account transaction
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Access selling price groups -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Access selling price groups</th>
+                                <td></td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Default Selling Price
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Essentials -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Essentials</th>
+                                <td></td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add/Edit/View/Delete leave type
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Add/Edit/View/Delete all leave 
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          Add/View own leave
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Approve Leave
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          Add/Edit/View/Delete all attendance
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          View own attendance
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Allow users to enter their own attendance from web
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Allow users to enter their own attendance from api
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View Pay Component
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add Pay Component
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add/Edit/View/Delete department
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add/Edit/View/Delete designation
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View all Payroll
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add Payroll
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit Payroll
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete Payroll
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Assign To Do's to others
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Create Message
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            View Message
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Access Sales Targets
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <!-- Repair -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Repair</th>
+                                <td></td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add Invoice
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit Invoice
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            View all invoice
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          View own invoice
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete Invoice
+                                        </label>
+                                    </div>
+                                    <hr class="text-white">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Change Invoice Status
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add/Edit/Delete Job Sheet Status
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Add Job Sheet
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Edit Job Sheet
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Delete Job Sheet
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            View Only Assigned Job Sheet
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          View All Job Sheets
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Superadmin -->
+                            <tr>
+                                <th scope="row" class="fs-5 fw-bold">Superadmin</th>
+                                <td></td>
+                                <td>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                                        <label class="form-check-label" for="flexCheck">
+                                            Access package subscriptions
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Form Button -->
+                    <div class="my-5 text-center">
+                        <button type="submit" class="btn btn-lg btn-success">Save</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+<footer class="bg-dark text-light text-center py-1" style="font-size: 12px;">Pico Intern - V4.7.8 | Copyright © 2023 All rights reserved.</footer>
+</html>

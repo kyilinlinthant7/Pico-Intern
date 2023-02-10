@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Admin Panel Dashboard</title>
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar starts here -->
+        <div class="bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-3 primary-text fs-4 fw-bold text-uppercase border-bottom bg-dark text-light">
+                <i class="fa-sharp fa-solid fa-laptop-code me-2"></i> Pico Intern
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-users me-2"></i> User Management
+                </a>
+                <a href="users.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-user me-2"></i> Users
+                </a>
+                <a href="roles.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fa-solid fa-suitcase me-2"></i> Roles
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar ends here -->
+
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand navbar-dark bg-dark py-4 px-4" id="nav">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-bars text-light fs-4 me-3" id="menu-toggle"></i>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle sexond-text fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user me-2"> Demo</i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Drop Down Filter Box -->
+            <h2 class="pt-3 ps-4">Welcome Demo,</h2>
+            <div class="container my-3">
+                <div class="dropdown float-end pe-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-calendar"></i> Filter by Date
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item active" href="#">Today</a></li>
+                      <li><a class="dropdown-item" href="#">Yesterday</a></li>
+                      <li><a class="dropdown-item" href="#">Last 7 Days</a></li>
+                      <!-- <li><hr class="dropdown-divider"></li> -->
+                      <li><a class="dropdown-item" href="#">Last 30 Days</a></li>
+                      <li><a class="dropdown-item" href="#">This Month</a></li>
+                      <li><a class="dropdown-item" href="#">Last Month</a></li>
+                      <li><a class="dropdown-item" href="#">This Month Last Year</a></li>
+                      <li><a class="dropdown-item" href="#">This Year</a></li>
+                      <li><a class="dropdown-item" href="#">Last Year</a></li>
+                      <li><a class="dropdown-item" href="#">Current Financial Year</a></li>
+                      <li><a class="dropdown-item" href="#">Last Financial Year</a></li>
+                      <li><a class="dropdown-item" href="#">Custom Range</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container-fluid px-4 pt-5">
+                <div class="row g-3 my-2">
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded count-box">
+                            <div>
+                                <h5 class="fw-bold pt-2">Total Sales</h5>
+                                <p class="fs-5 pt-2">0.00 ks</p>
+                            </div>
+                            <i class="fas fa-cart-shopping fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded count-box">
+                            <div>
+                                <h5 class="fw-bold pt-2">Net</h5>
+                                <p class="fs-5 pt-2">0.00 ks</p>
+                            </div>
+                            <i class="fa-regular fa-rectangle-list fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded count-box">
+                            <div>
+                                <h5 class="fw-bold pt-2">Invoice Due</h5>
+                                <p class="fs-5 pt-2">0.00 ks</p>
+                            </div>
+                            <i class="fa-regular fa-rectangle-list fs-1 primary-text border rounded-full secondary-bg p-3">!</i>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-2 bg-white shadow-sm d-flex justify-content-around align-items-center rounded count-box">
+                            <div>
+                                <h5 class="fw-bold pt-3">Total Sell Return</h5>
+                                <p class="fs-5 pt-3">0.00 ks</p>
+                            </div>
+                            <i class="fas fa-right-left fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-3 my-2">
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded count-box">
+                            <div>
+                                <h5 class="fw-bold pt-2">Total Purchase</h5>
+                                <p class="fs-5 pt-2">0.00 ks</p>
+                            </div>
+                            <i class="fas fa-money-check-dollar fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded count-box">
+                            <div>
+                                <h5 class="fw-bold pt-2">Purchase Due</h5>
+                                <p class="fs-5 pt-2">0.00 ks</p>
+                            </div>
+                            <i class="fas fa-exclamation-circle fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-2 bg-white shadow-sm d-flex justify-content-around align-items-center rounded count-box">
+                            <div>
+                                <h5 class="fw-bold pt-1">Total Purchase Return</h5>
+                                <p class="fs-5 pt-1">0.00 ks</p>
+                            </div>
+                            <i class="fas fa-rotate-left fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded count-box">
+                            <div>
+                                <h5 class="fw-bold pt-2">Expense</h5>
+                                <p class="fs-5 pt-2">0.00 ks</p>
+                            </div>
+                            <i class="fas fa-minus-circle fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-5">
+                    <h3 class="fs-4 mb-3">Sales Last 30 Days</h3>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+<footer class="bg-dark text-light text-center py-1" style="font-size: 12px;">Pico Intern - V4.7.8 | Copyright © 2023 All rights reserved.</footer>
+</html>
